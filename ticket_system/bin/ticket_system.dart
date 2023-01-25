@@ -1,3 +1,4 @@
+import 'package:ticket_system/bus.dart';
 import 'package:ticket_system/passenger.dart';
 
 void main(List<String> arguments) {
@@ -8,4 +9,7 @@ void main(List<String> arguments) {
   passenger.userEmail = "eslammongy995@gmail.com";
 
   passenger.displayPassengerInfo();
+
+  var bus = Bus();
+  bus.addNewVehicle(id: 909, model: "Fast Bus", company: "Mercedes");
 }
