@@ -4,8 +4,9 @@ class Trip {
   int? id;
   String? name;
   String? from;
+  String? to;
   DateTime? date;
-  DateTime? time;
+  int? time;
   Vehicle? vehicle;
 
   void createNewTrip(
@@ -14,6 +15,10 @@ class Trip {
       required String from,
       required String to,
       required DateTime date,
-      required DateTime time,
+      required int time,
       required Vehicle vehicle}) {}
+
+  void displayTripInfo() {
+    print("Trip Info::\n ID-> $id \n Trip-> $name \n From-> $from \n To-> $to");
+  }
 }

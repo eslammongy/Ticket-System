@@ -1,12 +1,24 @@
+import 'dart:collection';
+
 import 'package:ticket_system/passenger.dart';
 import 'package:ticket_system/ticket.dart';
 import 'package:ticket_system/trip.dart';
 import 'package:ticket_system/vehicle.dart';
 
 class Plan extends Vehicle implements Ticket {
+  HashMap<Trip, List<Passenger>> tripPassengers = HashMap();
+  List<Passenger> passengers = [];
   @override
-  bool createNewTicket(Passenger passenger, Trip trip) {
-    // TODO: implement createNewTicket
-    throw UnimplementedError();
+  void createNewTicket(Passenger passenger, Trip trip) {
+    passengers.add(passenger);
+    tripPassengers.addAll({trip: passengers});
+  }
+
+  void displayTripPassengers(Trip trip) {
+    var tripPass = tripPassengers[trip];
+    for (var passenger in tripPass!) {
+      passenger.displayPassengerInfo();
+      trip.displayTripInfo();
+    }
   }
 }
