@@ -1,5 +1,11 @@
-import 'package:ticket_system/ticket_system.dart' as ticket_system;
+import 'package:ticket_system/passenger.dart';
 
 void main(List<String> arguments) {
-  print('Hello world: ${ticket_system.calculate()}!');
+  var passenger = Passenger();
+  passenger.userName = "Eslam Mongy";
+  passenger.userID = 110;
+  passenger.userPhone = "01020260714";
+  passenger.userEmail = "eslammongy995@gmail.com";
+
+  passenger.displayPassengerInfo();
 }
