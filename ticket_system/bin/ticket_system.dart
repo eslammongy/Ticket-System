@@ -1,4 +1,3 @@
-import 'package:ticket_system/bus.dart';
 import 'package:ticket_system/passenger.dart';
 import 'package:ticket_system/plan.dart';
 import 'package:ticket_system/trip.dart';

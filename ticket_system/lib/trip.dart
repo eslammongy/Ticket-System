@@ -16,9 +16,18 @@ class Trip {
       required String to,
       required DateTime date,
       required int time,
-      required Vehicle vehicle}) {}
+      required Vehicle vehicle}) {
+    this.id = id;
+    this.name = name;
+    this.date = date;
+    this.time = time;
+    this.from = from;
+    this.to = to;
+    this.vehicle = vehicle;
+  }
 
   void displayTripInfo() {
-    print("Trip Info::\n ID-> $id \n Trip-> $name \n From-> $from \n To-> $to");
+    print(
+        "Trip Info::\n ID-> $id \n Trip-> $name \n From-> $from \n To-> $to $vehicle");
   }
 }

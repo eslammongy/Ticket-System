@@ -11,4 +11,9 @@ abstract class Vehicle {
     this.vehicleModel = model;
     this.vehicleCompany = company;
   }
+
+  @override
+  String toString() {
+    return "\n Vehicle ID-> $vehicleId \n Vehicle Model-> $vehicleModel \n Vehicle Company $vehicleCompany";
+  }
 }
